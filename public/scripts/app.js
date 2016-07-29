@@ -7,13 +7,18 @@ state = 1: analog
 
 // Modelo / estado
 
-var state = 1;
+var state = 0;
 
 var hour1 = 2;
 var hour2 = 3;
 var minute1 = 5;
 var minute2 = 9;
-var seconds = 55;
+var seconds = 45;
+/*
+var secteller = document.getElementById("secondteller");
+var minteller = document.getElementById("minuteteller");
+var hourteller = document.getElementById("hourteller");
+*/
 
 
 var canvas=document.getElementById("test");
@@ -41,28 +46,29 @@ function render2(state){
     html += '<div style="clear:both;"></div>';
     html += '</div>';
 
-    seconds+=1;
-    if(seconds===60){
-      seconds=0;
-      minute2+=1;
-    }
-    if(minute2>9){
-      minute1+=1;
+    //calcular el tiempo continuamente
+  seconds+=1;
+  if(seconds===60){
+    seconds=0;
+    minute2+=1;
+  }
+  if(minute2>9){
+    minute1+=1;
+    minute2=0;
+  }
+  if (minute1>5) {
+    hour2+=1;
+    minute1=0;
+    minute2=0;
+  }
+  if (hour1===2) {
+    if (hour2>3) {
+      hour2=0;
+      hour1=0;
       minute2=0;
-    }
-    if (minute1>5) {
-      hour2+=1;
       minute1=0;
-      minute2=0;
     }
-    if (hour1===2) {
-      if (hour2>3) {
-        hour2=0;
-        hour1=0;
-        minute2=0;
-        minute1=0;
-      }
-    }
+  }
 
   }
   else if (state===1) {
@@ -85,7 +91,6 @@ function render2(state){
     html += '<div class="hourteller">';
     html += '<div class="show hour"></div>';
     html += '<div class="no-show hour"></div>';
-    
     html += '</div>';
     
 
@@ -93,18 +98,43 @@ function render2(state){
     html += '<div class="minuteteller">';
     html += '<div class="show minute"></div>';
     html += '<div class="no-show minute"></div>';
-    
     html += '</div>';
     
 
     html += '<div class="secondteller">';
     html += '<div class="show second"></div>';
     html += '<div class="no-show second"></div>';
-    
     html += '</div>';
     
-
     html += '</div>';
+/*
+    secteller.style.transform='rotate('+ seconds* 6 +'deg)';
+    minteller.style.transform='rotate('+ (minute1 + minute2) * 6 +'deg)';
+    hourteller.style.transform='rotate('+ (hour1 + hour2) * 30 +'deg)';
+*/
+    //calcular el tiempo continuamente
+	  seconds+=1;
+	  if(seconds===60){
+	    seconds=0;
+	    minute2+=1;
+	  }
+	  if(minute2>9){
+	    minute1+=1;
+	    minute2=0;
+	  }
+	  if (minute1>5) {
+	    hour2+=1;
+	    minute1=0;
+	    minute2=0;
+	  }
+	  if (hour1===2) {
+	    if (hour2>3) {
+	      hour2=0;
+	      hour1=0;
+	      minute2=0;
+	      minute1=0;
+	    }
+	  }
 
   }
   return html; 
