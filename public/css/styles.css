@@ -1,9 +1,9 @@
 #test {
-  height: 300px;
-  width: 500px;
   background: #333;
   clear: both;
-  position: relative; }
+  height: 300px;
+  position: relative;
+  width: 500px; }
 
 .display {
   height: 100%; }
@@ -19,29 +19,29 @@
   width: 100px; }
 
 .separation {
-  line-height: 290px;
-  font-size: 52px;
+  background: gray;
   color: white;
   float: left;
-  width: 44px;
-  text-align: center;
+  font-size: 52px;
   height: 100%;
-  background: gray; }
+  line-height: 290px;
+  text-align: center;
+  width: 44px; }
 
 #analog-clock {
   background: white;
-  margin: 0 30px 0 100px;
   border-radius: 100%;
   height: 250px;
-  width: 250px;
-  position: relative; }
+  margin: 0 30px 0 100px;
+  position: relative;
+  width: 250px; }
 
 .digit {
   border-radius: 100%;
   height: 250px;
-  width: 250px;
+  position: absolute;
   text-align: center;
-  position: absolute; }
+  width: 250px; }
   .digit.d1 {
     transform: rotate(30deg); }
   .digit.d2 {
@@ -68,9 +68,9 @@
     transform: rotate(360deg); }
 
 .show {
-  width: 50%;
   float: left;
-  height: 18px; }
+  height: 18px;
+  width: 50%; }
   .show.hour {
     background: brown; }
   .show.minute {
@@ -90,9 +90,9 @@
   transform: rotate(260deg); }
 
 .no-show {
-  width: 50%;
   float: right;
-  height: 18px; }
+  height: 18px;
+  width: 50%; }
   .no-show.hour {
     background: white; }
   .no-show.minute {

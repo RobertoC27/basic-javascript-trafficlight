@@ -9,11 +9,11 @@ state = 1: analog
 
 var state = 1;
 
-var hour1=2;
-var hour2=3;
-var minute1=5;
-var minute2=9;
-var seconds=55;
+var hour1 = 2;
+var hour2 = 3;
+var minute1 = 5;
+var minute2 = 9;
+var seconds = 55;
 
 
 var canvas=document.getElementById("test");

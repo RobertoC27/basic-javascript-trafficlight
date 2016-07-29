@@ -1,23 +1,23 @@
-$digital-clock-width: 500px;
-$clock-height:300px;
-$digital-number-size: $digital-clock-width*0.2;
-$number-font-size:300px;
-$font-size:40px;
-$font-color:white;
-$number-separation:7px;
-$dots-size:44px;
-$analog-position:100px;
-$analog-num-separation:30deg;
 $analog-needle-size:18px;
+$analog-num-separation:30deg;
+$analog-position:100px;
+$clock-height:300px;
 $analog-radius:$clock-height - 50;
+$digital-clock-width: 500px;
+$digital-number-size: $digital-clock-width*0.2;
+$dots-size:44px;
+$font-color:white;
+$font-size:40px;
+$number-font-size:300px;
+$number-separation:7px;
 
 #test{
   
-  height: $clock-height;
-  width: $digital-clock-width;
   background: #333;
   clear: both;
+  height: $clock-height;
   position: relative;
+  width: $digital-clock-width;
 }
 .display{
   height: 100%;
@@ -33,31 +33,31 @@ $analog-radius:$clock-height - 50;
   width: $digital-number-size;
 }
 .separation{
-  line-height: $number-font-size - 10;
-  font-size: $font-size*1.3;
+  background:gray;
   color: $font-color;
   float: left;
-  width: $dots-size;
-  text-align: center;
+  font-size: $font-size*1.3;
   height: 100%;
-  background:gray;
+  line-height: $number-font-size - 10;
+  text-align: center;
+  width: $dots-size;
 }
 
 #analog-clock{
-	background:white;
 	
-	margin: 0 30px 0 $analog-position;
+	background:white;
 	border-radius:100%;
 	height:$analog-radius;
-	width:$analog-radius;
+	margin: 0 30px 0 $analog-position;
 	position:relative;
+	width:$analog-radius;
 }
 .digit{
 	border-radius:100%;
 	height:$analog-radius;
-	width:$analog-radius;
-	text-align:center;
 	position:absolute;
+	text-align:center;
+	width:$analog-radius;
 
 	@for $i from 1 through(12){
 		&.d#{$i}{
@@ -68,9 +68,9 @@ $analog-radius:$clock-height - 50;
 
 
 .show{
-	width:50%;
 	float: left;
   height: $analog-needle-size;
+	width:50%;
   
   &.hour{
   	background:brown;
@@ -88,6 +88,7 @@ $analog-radius:$clock-height - 50;
 .hourteller{
 	transform: rotate( 180deg );
 
+
 }
 .minuteteller{
 	transform: rotate( 230deg);
@@ -97,9 +98,9 @@ $analog-radius:$clock-height - 50;
 }
 
 .no-show{
-	width:50%;
 	float: right;
   height: $analog-needle-size;
+	width:50%;
   
   &.hour{
   	background:white;
