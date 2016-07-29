@@ -43,26 +43,26 @@
   text-align: center;
   position: absolute; }
   .digit.digit1 {
-    transform: rotate(100px); }
-  .digit.digit2 {
     transform: rotate(200px); }
-  .digit.digit3 {
-    transform: rotate(300px); }
-  .digit.digit4 {
+  .digit.digit2 {
     transform: rotate(400px); }
-  .digit.digit5 {
-    transform: rotate(500px); }
-  .digit.digit6 {
+  .digit.digit3 {
     transform: rotate(600px); }
-  .digit.digit7 {
-    transform: rotate(700px); }
-  .digit.digit8 {
+  .digit.digit4 {
     transform: rotate(800px); }
-  .digit.digit9 {
-    transform: rotate(900px); }
-  .digit.digit10 {
+  .digit.digit5 {
     transform: rotate(1000px); }
-  .digit.digit11 {
-    transform: rotate(1100px); }
-  .digit.digit12 {
+  .digit.digit6 {
     transform: rotate(1200px); }
+  .digit.digit7 {
+    transform: rotate(1400px); }
+  .digit.digit8 {
+    transform: rotate(1600px); }
+  .digit.digit9 {
+    transform: rotate(1800px); }
+  .digit.digit10 {
+    transform: rotate(2000px); }
+  .digit.digit11 {
+    transform: rotate(2200px); }
+  .digit.digit12 {
+    transform: rotate(2400px); }

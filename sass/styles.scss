@@ -58,7 +58,7 @@ $analog-separation:5px;
 
 	@for $i from 1 through(12){
 		&.digit#{$i}{
-			transform: rotate($analog-position*$i);
+			transform: rotate(($analog-position+100) *$i);
 		}
 	}
 
