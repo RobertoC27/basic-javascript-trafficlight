@@ -1,20 +1,19 @@
 /*
 
-state = 0: red
-state = 1: yellow
-state = 2: green
+state = 0: digital
+state = 1: analog
 
 */
 
 // Modelo / estado
 
-var state = 0;
+var state = 1;
 
 var hour1=2;
-var hour2=2;
+var hour2=3;
 var minute1=5;
 var minute2=9;
-var seconds=58;
+var seconds=55;
 
 
 var canvas=document.getElementById("test");
@@ -29,8 +28,6 @@ clockController.addEventListener("change", function() {
     }
     canvas.innerHTML = render2(state);
 });
-
-var changeTrigger = document.getElementById("change");
 
 function render2(state){
   var html = "";
@@ -72,35 +69,40 @@ function render2(state){
 
   	html += '<div id="analog-clock">';
 
-    html += '<div class="digit 1">1</div>';
-    html += '<div class="digit 2">2</div>';
-    html += '<div class="digit 3">3</div>';
-    html += '<div class="digit 4">4</div>';
-    html += '<div class="digit 5">5</div>';
-    html += '<div class="digit 6">6</div>';
-    html += '<div class="digit 7">7</div>';
-    html += '<div class="digit 8">8</div>';
-    html += '<div class="digit 9">9</div>';
-    html += '<div class="digit 10">10</div>';
-    html += '<div class="digit 11">11</div>';
-    html += '<div class="digit 12">12</div>';
+    html += '<div class="digit d1">1</div>';
+    html += '<div class="digit d2">2</div>';
+    html += '<div class="digit d3">3</div>';
+    html += '<div class="digit d4">4</div>';
+    html += '<div class="digit d5">5</div>';
+    html += '<div class="digit d6">6</div>';
+    html += '<div class="digit d7">7</div>';
+    html += '<div class="digit d8">8</div>';
+    html += '<div class="digit d9">9</div>';
+    html += '<div class="digit d10">10</div>';
+    html += '<div class="digit d11">11</div>';
+    html += '<div class="digit d12">12</div>';
 
     html += '<div class="hourteller">';
     html += '<div class="show hour"></div>';
     html += '<div class="no-show hour"></div>';
+    
     html += '</div>';
+    
 
 
     html += '<div class="minuteteller">';
     html += '<div class="show minute"></div>';
     html += '<div class="no-show minute"></div>';
+    
     html += '</div>';
-
+    
 
     html += '<div class="secondteller">';
     html += '<div class="show second"></div>';
     html += '<div class="no-show second"></div>';
+    
     html += '</div>';
+    
 
     html += '</div>';
 
